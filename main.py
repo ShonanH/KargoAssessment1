@@ -1,4 +1,4 @@
-def isIsomorphic(s, t) -> bool:
+def isIsomorphic(s, t):
     if (len(s) != len(t)):
         return (False)
     return getIso(s,t) and getIso(t,s)
@@ -17,4 +17,4 @@ def getIso(s, t):
         elif check[s[i]] != t[i]:
             return (False)
     return (True)
-print(isIsomorphic("foo", "321"))
+print(isIsomorphic("123", "321"))
