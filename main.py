@@ -1,9 +1,14 @@
-def isIsomorphic(s, t):
+import sys
+
+first_arg = sys.argv[1]
+second_arg = sys.argv[2]
+
+def isIsomorphic(s=first_arg, t=second_arg):
     if (len(s) != len(t)):
         return (False)
     return getIso(s,t) and getIso(t,s)
     
-def getIso(s, t):
+def getIso(s=first_arg, t=second_arg):
     #print (t)
     len_s = len(s)
     len_t = len(t)
@@ -17,4 +22,5 @@ def getIso(s, t):
         elif check[s[i]] != t[i]:
             return (False)
     return (True)
-print(isIsomorphic("123", "321"))
+if __name__ == "__main__":
+    print(isIsomorphic())
